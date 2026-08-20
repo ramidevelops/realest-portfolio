@@ -3,9 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Figma Weave AI Workflow</title>
+  <title>Figma Weave AI Workflow — Ramon Villamediana</title>
   <meta name="description" content="Built a Figma Weave AI workflow to automate social asset production for Mosaic — cutting turnaround from 2 days to 4 hours.">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .project-img {
+      width: 100%;
+      display: block;
+      border-radius: 4px;
+      border: 0.5px solid rgba(0,0,0,0.08);
+    }
+    .project-video {
+      width: 100%;
+      display: block;
+      border-radius: 4px;
+      border: 0.5px solid rgba(0,0,0,0.08);
+    }
+    .stat-row {
+      display: flex;
+      gap: 2.5rem;
+      margin-top: 1.5rem;
+    }
+    .stat {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+    .stat-number {
+      font-family: 'Inter', sans-serif;
+      font-size: 2rem;
+      font-weight: 400;
+      letter-spacing: -0.03em;
+      color: #0a0a0a;
+      line-height: 1;
+    }
+    .stat-label {
+      font-family: inter, sans-serif;
+      font-size: 10.5px;
+      color: rgba(0,0,0,0.4);
+      letter-spacing: 0.04em;
+    }
+  </style>
 </head>
 <body>
   <div class="layout">
@@ -16,66 +54,104 @@
         <div class="nav-label">Work</div>
         <a href="index.html" class="nav-link">All Projects</a>
       </nav>
-
+      <nav class="nav-section">
+        <div class="nav-label">Resume</div>
+        <div class="resume-entry">
+          <div class="resume-title">Web & Visual Designer</div>
+          <div class="resume-co">↳ Mosaic, 2024 – Present</div>
+        </div>
+        <div class="resume-entry">
+          <div class="resume-title">Graphic & Visual Designer</div>
+          <div class="resume-co">↳ Accenture, 2021 – 2024</div>
+        </div>
+      </nav>
       <div class="tagline">— GODS PLAN IS REAL.</div>
     </aside>
+
     <main class="main">
 
       <section class="project-header">
         <a href="index.html" class="back-link">← All Projects</a>
-        <h1 class="project-title">Figma Weave AI Workflow</h1>
+        <h1 class="project-title">Figma Weave<br>AI Workflow</h1>
         <div class="project-meta">
-          <span class="project-client">Solo Build — 2 Days to 4 Hours Turnaround</span>
-          <div class="project-divider"></div>
           <span class="project-client">Mosaic</span>
           <div class="project-divider"></div>
-          <div class="tag-row"><span class="tag tag-frontend">AI</span><span class="tag tag-web">System</span></div>
+          <span class="project-client">Solo Build · 2025</span>
+          <div class="project-divider"></div>
+          <div class="tag-row">
+            <span class="tag tag-frontend">AI</span>
+            <span class="tag tag-web">Systems</span>
+            <span class="tag tag-brand">Brand</span>
+          </div>
         </div>
       </section>
 
       <section class="project-body">
 
+        <!-- Problem -->
         <div>
-          <p class="project-text">Built a <strong>Figma Weave</strong> AI workflow to eliminate the friction around producing simple social assets — what used to require sourcing images, sourcing copy, and looping in multiple collaborators just to ship one Instagram post.</p>
+          <div class="project-section-label">The Problem</div>
+          <p class="project-text">Producing a single social asset at Mosaic meant sourcing imagery, drafting copy, looping in collaborators, and manually applying brand rules — a process that averaged <strong>2 days per post</strong> for what should be routine output. With a recurring social calendar and a lean team, that bottleneck wasn't sustainable.</p>
+          <div class="stat-row">
+            <div class="stat">
+              <span class="stat-number">2d</span>
+              <span class="stat-label">Previous turnaround per asset</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">4h</span>
+              <span class="stat-label">Turnaround after workflow</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">1</span>
+              <span class="stat-label">Person. Solo build & maintenance</span>
+            </div>
+          </div>
         </div>
 
-  <div class="img-placeholder wide">
-  <video class="project-img wide" autoplay loop muted playsinline>
-  <source src="/assets/weave-workflow/weave-workflow-preview.webm" type="video/webm">
-  <source src="/assets/weave-workflow/weave-workflow-preview.mp4" type="video/mp4">
-</video>
-    </div>
-
+        <!-- Solution -->
         <div>
-          <p class="project-text">The workflow ingests the social calendar brief and converts it into structured JSON — headline, content, and call-to-action — then automatically categorizes each post (community investment, operations, recruiting, and more) to determine the right background treatment for that category.</p>
+          <div class="project-section-label">The Solution</div>
+          <p class="project-text">Built a <strong>Figma Weave</strong> AI pipeline that takes a social calendar brief as input and outputs production-ready, on-brand assets — no manual image sourcing, no copy pass, no back-and-forth. The system handles categorization, brand application, and layout generation end-to-end.</p>
         </div>
 
-        <div class="img-placeholder tall">
-     <img src="/assets/weave-workflow/JSON Data.png" alt="JSON data that is fed into Figma Weave" class="project-img">
-    </div>
+        <!-- Workflow video -->
+        <video class="project-video" autoplay loop muted playsinline>
+          <source src="assets/weave-workflow/weave-workflow-preview.webm" type="video/webm">
+          <source src="assets/weave-workflow/weave-workflow-preview.mp4" type="video/mp4">
+        </video>
 
+        <!-- How it works -->
         <div>
-          <p class="project-text">I fed the system Mosaic's brand guidelines and style rules, plus a library of approved reference assets, so every generated output stayed on-brand without manual oversight.</p>
+          <div class="project-section-label">How It Works</div>
+          <p class="project-text">The brief gets ingested and converted into structured JSON — headline, body copy, and CTA — then automatically categorized by post type: community investment, operations, recruiting, sustainability, and more. Each category maps to a pre-defined background treatment so the system knows which visual direction to apply without any manual input.</p>
         </div>
 
-        <div class="img-placeholder tall">
-      <img src="/assets/weave-workflow/reference-library.png" alt="reference library with approved assets" class="project-img">
-    </div>
+        <img src="assets/weave-workflow/JSON Data.png" alt="JSON structure fed into the Figma Weave workflow" class="project-img">
 
+        <!-- Brand guardrails -->
         <div>
-          <p class="project-text">Built and maintained solo, the workflow cut asset turnaround from <strong>2 days to 4 hours</strong> — freeing up time for higher-priority design work instead of repetitive production.</p>
+          <div class="project-section-label">Brand Guardrails</div>
+          <p class="project-text">The pipeline was trained on Mosaic's brand guidelines, approved typography, color system, and a curated library of reference assets. Every output stays on-brand without a manual review pass — the system enforces the rules so I don't have to.</p>
+        </div>
+
+        <img src="assets/weave-workflow/reference-library.png" alt="Reference library of approved brand assets fed into the workflow" class="project-img">
+
+        <!-- Output examples -->
+        <div>
+          <div class="project-section-label">Output Examples</div>
+          <p class="project-text">Generated assets across post categories — each one brand-compliant and production-ready, no manual intervention.</p>
         </div>
 
         <div class="img-grid-2">
-          <div class="img-placeholder sq">
-      <img src="/assets/weave-workflow/social-object-1.jpg" alt="reference library with approved assets" class="project-img">
-    </div>
-          <div class="img-placeholder sq">
-      <img src="/assets/weave-workflow/social-object-2.jpg" alt="reference library with approved assets" class="project-img">
-    </div>
+          <img src="assets/weave-workflow/social-object-1.jpg" alt="AI-generated social asset — community investment post" class="project-img">
+          <img src="assets/weave-workflow/social-object-2.jpg" alt="AI-generated social asset — operations post" class="project-img">
         </div>
-        <br>
-        <br>
+
+        <!-- Result -->
+        <div>
+          <div class="project-section-label">Result</div>
+          <p class="project-text">Asset turnaround dropped from <strong>2 days to 4 hours</strong> — built and maintained solo. Time recovered went back into higher-priority design work instead of repetitive production cycles.</p>
+        </div>
 
       </section>
     </main>
