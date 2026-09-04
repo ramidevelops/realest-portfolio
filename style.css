@@ -29,17 +29,12 @@ body {
   grid-template-columns:1fr;
 }
 
-/* ─── Sidebar ────────────────────────────────────────────── */
-.sidebar {
-  padding: 2.5rem 1.5rem 2.5rem 2rem;
-  display: none;
-  flex-direction: column;
-  gap: 2.5rem;
-  border-right: 0.5px solid rgba(0,0,0,0.08);
-  height: 100vh;
-  position: sticky;
-  top: 0;
-  overflow-y: auto;
+
+.rv-logo{
+  width: 30%;
+  opacity: 0.15;
+}
+
 }
 
 .logo-mark {
@@ -150,8 +145,12 @@ body {
   margin-top: 0.5rem;
   width: fit-content;
   transition: background 0.15s;
+  background:transparent;
+  cursor: pointer;
 }
 .hero-email:hover { background: rgba(0,0,0,0.04); }
+
+
 
 /* ─── Work List ──────────────────────────────────────────── */
 .work-header {
@@ -194,7 +193,7 @@ body {
 
 .work-client {
   font-family: 'Roboto Mono', monospace;
-  font-size: 10.5px;
+  font-size: 12px;
   color: rgba(0,0,0,0.32);
 }
 
@@ -298,7 +297,6 @@ body {
 .img-placeholder {
   width: 100%;
   background: rgba(255,255,255,0.45);
-  border: 0.5px solid rgba(0,0,0,0.08);
   border-radius: 4px;
   display: flex;
   flex-direction: column;
@@ -341,8 +339,8 @@ body {
 .project-img.sq    { aspect-ratio: 1/1; }
 .project-img.port  { aspect-ratio: 3/4; }
 
-.project-img.contain {
-  object-fit: contain;
+.project-img.cover {
+  object-fit: cover;
   border: none;
 }
 
