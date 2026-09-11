@@ -14,9 +14,24 @@
   <meta name="twitter:description" content="Brand to UI. Print to code. Fortune 500 + Accenture. $3B in deals.">
   <link rel="stylesheet" href="style.css">
    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <script>
+    try {
+      if (sessionStorage.getItem('portfolioLoaderSeen') === 'true') {
+        document.documentElement.classList.add('skip-site-loader');
+      } else {
+        document.documentElement.classList.add('initial-site-visit');
+        sessionStorage.setItem('portfolioLoaderSeen', 'true');
+      }
+    } catch (error) {
+      document.documentElement.classList.add('initial-site-visit');
+    }
+  </script>
 
 </head>
-<body>
+<body class="home-page">
+  <div class="site-loader" role="status" aria-label="Loading">
+    <img src="assets/parcel-11-1x1-loop.svg" alt="">
+  </div>
   <div class="layout layout-home">
     <main class="main">
 
@@ -177,6 +192,17 @@ Ramon is currently the visual lead at a Fortune 500 [$MOS] — previously at Acc
 
 
 <script>
+window.addEventListener('load', () => {
+  if (!document.documentElement.classList.contains('initial-site-visit')) {
+    document.querySelector('.site-loader')?.classList.add('is-hidden');
+    return;
+  }
+
+  setTimeout(() => {
+    document.querySelector('.site-loader')?.classList.add('is-hidden');
+  }, 2000);
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     const btn = document.querySelector('.hero-email');
     const txt = btn?.querySelector('.email-text');
